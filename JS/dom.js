@@ -66,7 +66,6 @@ function requete_ajax(){
     {
         alert("Veuillez indiquer votre heure de depart  ! ");
     }
-    
     // si tout est correct on active l'envoie de la requete
     else{
         

@@ -57,12 +57,12 @@ session_start();
             <label for="rue"><strong> Numero Civique</label>
             <input type="number" id="numero" name="numero"> <br><br>
 
-            <label for="date_arrive"><strong> Date et Heure d'arrivée(AAAA-MM-JJ)</label>
+            <label for="date_arrive"><strong> Date et Heure d'arrivée</label>
             <input type="date" id="date_arrive" name="date_arrive" data-date="" data-date-format="YYYY-MMMM-DD">
             <input type="time" id="heure_arrive" name="heure_arrive"> <br> <br> 
 
 
-            <label for="date_depart"> <strong>Date et Heure de départ(XX:XX) </label>
+            <label for="date_depart"> <strong>Date et Heure de départ </label>
             <input type="date" id="date_depart" name="date_depart">
             <input type="time" id="heure_depart" name="heure_depart"> <br><br><br>
    
