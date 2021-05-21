@@ -19,7 +19,7 @@ function requete_ajax(){
     var envoyer = document.getElementById('btn3').value;
     var province = document.getElementById('province').value;
     var lieu_v = document.getElementById('lieu_v').value;
-    var ville = document.getElementById('ville').value;
+    var ville = document.getElementById('ville').text;
     var rue = document.getElementById('rue').value;
     var numero = document.getElementById('numero').value;
     var date_arrive = document.getElementById('date_arrive').value;
@@ -28,6 +28,8 @@ function requete_ajax(){
     var heure_depart = document.getElementById('heure_depart').value;
     var date_time_arrive = date_arrive + " " + heure_arrive + ":00";
     var date_time_depart = date_depart  + " " + heure_depart + "00";
+    var pathologie = document.getElementById('pathologie').value;
+    alert(pathologie);
 
     if(ville == "")
     {
@@ -68,23 +70,56 @@ function requete_ajax(){
     }
     // si tout est correct on active l'envoie de la requete
     else{
-        
-        var visite = new Array(province, lieu_v, ville, rue, numero, date_time_arrive, date_time_depart );
+        alert("ca marche");
+        var visite = new Array(province, lieu_v, ville, rue, numero, date_time_arrive, date_time_depart, pathologie );
         var objet = JSON.stringify(visite);
+        $(document).ready(function () {
+            $("#btn3").click(enregistrerVisite);
 
-        //requete ajax pour enregistrer les données de la visite
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                // on envoie la reponse de la requete dans l'element reponse du DOM
-                document.getElementById("reponse").innerHTML = xmlhttp.responseText;
-            }
-        };
-        // on envoie la requete en methode POST accompagné de la variable JSON
-        xmlhttp.open("POST", "enregistrer_visite.php?p=" + province +"&l="+lieu_v+ "&v="+ville+"&r="+rue+"num="+numero+"&da="+date_arrive+"&dd="+date_depart, true);
-        xmlhttp.send();
+        });
 
+        function enregistrerVisite()
+        {
+            //requete ajax pour enregistrer les données de la visite
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "enregistrer_visite.php", true);
+            
+            // var pathologie = $('pathologie').value;
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    // on envoie la reponse de la requete dans l'element reponse du DOM
+                    //document.getElementById("reponse").innerHTML = xmlhttp.responseText;
+                    alert("ca marche");
+                }
+            };
+            // on envoie la requete en methode POST accompagné de la variable JSON
+            // xmlhttp.open("POST", "enregistrer_visite.php?p=" + province +"&l="+lieu_v+ "&v="+ville+"&r="+rue+"num="+numero+"&da="+date_arrive+"&dd="+date_depart, true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); // pour decoder l'url
+
+            xmlhttp.send("pathologie="+pathologie);
+
+            
+        }
         return true;
+
+        
+        
+        
+        
+        
+        // //requete ajax pour enregistrer les données de la visite
+        // var xmlhttp = new XMLHttpRequest();
+        // xmlhttp.onreadystatechange = function() {
+        //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        //         // on envoie la reponse de la requete dans l'element reponse du DOM
+        //         document.getElementById("reponse").innerHTML = xmlhttp.responseText;
+        //     }
+        // };
+        // // on envoie la requete en methode POST accompagné de la variable JSON
+        // xmlhttp.open("POST", "enregistrer_visite.php?p=" + province +"&l="+lieu_v+ "&v="+ville+"&r="+rue+"num="+numero+"&da="+date_arrive+"&dd="+date_depart, true);
+        // xmlhttp.send();
+
+        // return true;
     }
     
 

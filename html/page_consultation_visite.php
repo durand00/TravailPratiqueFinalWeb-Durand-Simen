@@ -27,7 +27,7 @@
 
      <h1>Enregister une visite </h1>
 
-              
+             
             <table>
                 <tr>
                     <th>Province</th>
@@ -37,6 +37,7 @@
                     <th>Numero civique</th>
                     <th>Date d'arrive</th>
                     <th> Date de depart </th>
+                    <th> Pathologie </th>
                 </tr>
                 <?php
                 // ini_set('display_errors', 'on');

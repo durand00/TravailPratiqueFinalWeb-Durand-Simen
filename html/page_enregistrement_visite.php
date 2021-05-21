@@ -35,7 +35,7 @@ session_start();
 
         <div class="form">
 
-        <form id="formulaire" action="../app/enregistrer_visite.php" method="POST">
+        <form id="formulaire" action="../app/enregistrer_visite.php" onsubmit="requete_ajax()" method="POST">
             <label for="province"><strong> Province</label>
             <select id="province" name="province">
                 <option value="Quebec">Quebec</option>
@@ -65,6 +65,10 @@ session_start();
             <label for="date_depart"> <strong>Date et Heure de départ </label>
             <input type="date" id="date_depart" name="date_depart">
             <input type="time" id="heure_depart" name="heure_depart"> <br><br><br>
+
+            <label for="pathologie"> <strong>Avez vous contactez une pathologie </label>
+            <input type = "text" id="pathologie" name="payhologie">
+            
    
             <input type="submit" id="btn3" value="envoyer" name="submit" style="font-size: 16px;" > 
 

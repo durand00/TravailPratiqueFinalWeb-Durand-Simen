@@ -12,6 +12,7 @@
         var $province;
         var $date_arrive;
         var $date_depart;
+        var $pathologie;
 
         public function __construct()
         {
@@ -23,6 +24,7 @@
             $this->province = "default";
             $this->date_arrive = "date_arrive";
             $this->date_depart = "date_depart";
+            $this->pathologie = "pathologie";
         }
         
         public function getVisite()
@@ -31,7 +33,7 @@
                 $connexion=new PDO(DNS, USAGER, MDP);
                 $connexion-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-                $requete = $connexion -> exec("INSERT INTO visite (email, lieu_visite, numero_civique, rue, ville, province, date_arrive, date_depart) VALUES('$this->email', '$this->lieu_visite', '$this->numero_civique','$this->rue','$this->ville','$this->province','$this->date_arrive', '$this->date_depart') ");
+                $requete = $connexion -> exec("INSERT INTO visite (email, lieu_visite, numero_civique, rue, ville, province, date_arrive, date_depart,pathologie) VALUES('$this->email', '$this->lieu_visite', '$this->numero_civique','$this->rue','$this->ville','$this->province','$this->date_arrive', '$this->date_depart','$this->pathologie') ");
                 return 1;
              }
              catch(PDOException $e){
@@ -58,6 +60,7 @@
                     echo "<td> ".$res['numero_civique']."</td>";
                     echo "<td> ".$res['date_arrive']."</td>";
                     echo "<td> ".$res['date_depart']."</td>";
+                    echo "<td> ".$res['pathologie']."</td>";
                     echo "</tr>";
 
                 }
