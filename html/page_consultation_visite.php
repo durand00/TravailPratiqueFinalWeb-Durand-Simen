@@ -39,7 +39,7 @@
                     <th> Date de depart </th>
                 </tr>
                 <?php
-                ini_set('display_errors', 'on');
+                // ini_set('display_errors', 'on');
                     session_start();
                     require_once '../app/visite.class.php';
                     $email = $_SESSION['username'];
