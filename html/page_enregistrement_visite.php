@@ -5,13 +5,14 @@ session_start();
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html>
 <head>
     <meta charset="Utf-8">
     <link rel="stylesheet" href="..\styles\style_page_accueil.css" media="screen" type="text/css">
     <title> enregistrement</title>
-    <script type="text/javascript" src="../JS/dom.js"> </script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../JS/dom.js"></script>
     <script type="text/javascript" src="../JS/fonction.js"> </script>
 </head>
 
@@ -35,7 +36,7 @@ session_start();
 
         <div class="form">
 
-        <form id="formulaire" action="../app/enregistrer_visite.php" onsubmit="requete_ajax()" method="POST">
+        <form id="formulaire" action="../app/enregistrer_visite.php" onsubmit="requete_ajax()"  method="POST">
             <label for="province"><strong> Province</label>
             <select id="province" name="province">
                 <option value="Quebec">Quebec</option>
@@ -49,12 +50,12 @@ session_start();
             <input type="text" id="lieu_v" name="lieu_v">
 
             <label for="ville"><strong> Ville</label>
-            <input type="text" id="ville" name="ville">
+            <input type="text" id="ville" name="ville"/>
 
             <label for="rue"><strong> Rue</label>
             <input type="text" id="rue" name="rue"><br><br>
 
-            <label for="rue"><strong> Numero Civique</label>
+            <label for="numero"><strong> Numero Civique</label>
             <input type="number" id="numero" name="numero"> <br><br>
 
             <label for="date_arrive"><strong> Date et Heure d'arrivée</label>
@@ -67,10 +68,10 @@ session_start();
             <input type="time" id="heure_depart" name="heure_depart"> <br><br><br>
 
             <label for="pathologie"> <strong>Avez vous contactez une pathologie </label>
-            <input type = "text" id="pathologie" name="payhologie">
+            <input type = "text" id="pathologie" name="pathologie">
             
    
-            <input type="submit" id="btn3" value="envoyer" name="submit" style="font-size: 16px;" > 
+            <input type="submit" id="btn3" value="envoyer" name="submit"  style="font-size: 16px;" > 
 
             </form>
             

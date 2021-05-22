@@ -3,8 +3,8 @@ ini_set('display_errors', 'on');
 require_once 'visite.class.php';
 
 session_start();
-if(!isset($_POST['lieu_v']) || empty($_POST['ville']) || empty($_POST['rue'])){
-    header("location: page_enregistrement_visite.php?erreur=3");
+if(!isset($_POST['lieu_v']) || empty($_POST['ville']) || empty($_POST['rue']) || empty($_POST['pathologie'])){
+    header("location: ../html/page_enregistrement_visite.php?erreur=3");
     exit();
 }
 
@@ -33,18 +33,18 @@ if(!isset($_POST['lieu_v']) || empty($_POST['ville']) || empty($_POST['rue'])){
     $heure_arrives = filter_input(INPUT_POST, "heure_arrive", FILTER_DEFAULT); 
     $date_departs = filter_input(INPUT_POST, "date_depart", FILTER_DEFAULT); 
     $heure_departs = filter_input(INPUT_POST, "heure_depart", FILTER_DEFAULT); 
-    $pathologies = filter_input(INPUT_POST, "pathologies", FILTER_DEFAULT); 
+    // $pathologies = filter_input(INPUT_POST, "pathologies", FILTER_DEFAULT); 
 
-    $var1 = $date_arrives." ".$heure_arrives.":00";
-    $var2 = $date_departs." ".$heure_departs.":00";
-    $visite->province = $provinces;
-    $visite->lieu_visite = $lieus;
-    $visite->ville = $villes;
-    $visite->rue = $rues;
-    $visite->numero = $numeros;
-    $visite->date_depart = $var2;
-    $visite->date_arrive = $var1;
-    $visite->pathologie = $pathologies;
+    // $var1 = $date_arrives." ".$heure_arrives.":00";
+    // $var2 = $date_departs." ".$heure_departs.":00";
+    // $visite->province = $provinces;
+    // $visite->lieu_visite = $lieus;
+    // $visite->ville = $villes;
+    // $visite->rue = $rues;
+    // $visite->numero = $numeros;
+    // $visite->date_depart = $var2;
+    // $visite->date_arrive = $var1;
+    // $visite->pathologie = $pathologies;
 
 
    
