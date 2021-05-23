@@ -42,7 +42,7 @@ session_start();
                 <option value="Quebec">Quebec</option>
                 <option value="Ontarion">Ontario</option>
                 <option value="Alberta">Alberta</option>
-                <option value="Nouvelle Colombie">Nouvelle Colombie</option> </body> </html>
+                <!-- <option value="Nouvelle Colombie">Nouvelle Colombie</option> </body> </html> -->
             </select>
 
 
