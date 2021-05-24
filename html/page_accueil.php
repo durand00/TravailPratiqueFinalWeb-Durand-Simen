@@ -32,7 +32,7 @@ session_start();
 
 <script src="../JS/fonction.js"></script>
 <script src="../JS/dom.js"></script>
-    </body>
+</body>
 
 
 

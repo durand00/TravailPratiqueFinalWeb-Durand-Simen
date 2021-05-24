@@ -2,7 +2,7 @@
 
 //session_start();
 
-// include_once 'validerSession.inc.php';
+include_once 'validerSession.inc.php';
 
 $_SESSION = array();
 

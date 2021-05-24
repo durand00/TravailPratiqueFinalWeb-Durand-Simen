@@ -27,7 +27,7 @@
 
      <h1>Enregister une visite </h1>
 
-             
+              
             <table>
                 <tr>
                     <th>Province</th>
@@ -37,10 +37,10 @@
                     <th>Numero civique</th>
                     <th>Date d'arrive</th>
                     <th> Date de depart </th>
-                    <th> Pathologie </th>
+                    <th> pathologie </th>
                 </tr>
                 <?php
-                // ini_set('display_errors', 'on');
+                ini_set('display_errors', 'on');
                     session_start();
                     require_once '../app/visite.class.php';
                     $email = $_SESSION['username'];

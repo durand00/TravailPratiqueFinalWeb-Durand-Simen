@@ -5,14 +5,13 @@ session_start();
 
 ?>
 
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="Utf-8">
     <link rel="stylesheet" href="..\styles\style_page_accueil.css" media="screen" type="text/css">
     <title> enregistrement</title>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../JS/dom.js"></script>
+    <script type="text/javascript" src="../JS/dom.js"> </script>
     <script type="text/javascript" src="../JS/fonction.js"> </script>
 </head>
 
@@ -36,13 +35,13 @@ session_start();
 
         <div class="form">
 
-        <form id="formulaire" action="../app/enregistrer_visite.php" onsubmit="requete_ajax()"  method="POST">
+        <form id="formulaire" action="../app/enregistrer_visite.php" onsubmit="requete_ajax()" method="POST">
             <label for="province"><strong> Province</label>
             <select id="province" name="province">
                 <option value="Quebec">Quebec</option>
                 <option value="Ontarion">Ontario</option>
                 <option value="Alberta">Alberta</option>
-                <!-- <option value="Nouvelle Colombie">Nouvelle Colombie</option> </body> </html> -->
+                <option value="Nouvelle Colombie">Nouvelle Colombie</option> </body> </html>
             </select>
 
 
@@ -50,12 +49,12 @@ session_start();
             <input type="text" id="lieu_v" name="lieu_v">
 
             <label for="ville"><strong> Ville</label>
-            <input type="text" id="ville" name="ville"/>
+            <input type="text" id="ville" name="ville">
 
             <label for="rue"><strong> Rue</label>
             <input type="text" id="rue" name="rue"><br><br>
 
-            <label for="numero"><strong> Numero Civique</label>
+            <label for="rue"><strong> Numero Civique</label>
             <input type="number" id="numero" name="numero"> <br><br>
 
             <label for="date_arrive"><strong> Date et Heure d'arrivée</label>
@@ -63,15 +62,14 @@ session_start();
             <input type="time" id="heure_arrive" name="heure_arrive"> <br> <br> 
 
 
-            <label for="date_depart"> <strong>Date et Heure de départ </label>
+            <label for="date_depart"> <strong>Date et Heure de départ</label>
             <input type="date" id="date_depart" name="date_depart">
             <input type="time" id="heure_depart" name="heure_depart"> <br><br><br>
 
-            <label for="pathologie"> <strong>Avez vous contactez une pathologie </label>
-            <input type = "text" id="pathologie" name="pathologie">
-            
+            <label for="pathologie"> <strong>Avez vous eu une pathologie à ce lieu?(oui ou non)</label>
+            <input type="pathologie" id="pathologie" name="pathologie">
    
-            <input type="submit" id="btn3" value="envoyer" name="submit"  style="font-size: 16px;" > 
+            <input type="submit" id="btn3" value="envoyer" name="submit" style="font-size: 16px;" > 
 
             </form>
             
