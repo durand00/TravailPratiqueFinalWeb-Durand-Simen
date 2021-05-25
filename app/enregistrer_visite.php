@@ -15,7 +15,7 @@ require_once 'visite.class.php';
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
         $from = " durantsimen@gmail.com";
-        $to = "Cyrilngueloh3@gmail.com";
+        $to = "kngahami@gmail.com";
         $subject = "Urgence sanitaire";
         $message = " Vous etes entré en contact avec une personne contagieuse";
         $headers = "From:".$from;
