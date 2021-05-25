@@ -1,5 +1,5 @@
 <?php
-
+ 
     include_once '../session/config.inc.php';
     
     class Visite {
