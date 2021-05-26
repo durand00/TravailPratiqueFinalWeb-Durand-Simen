@@ -1,27 +1,12 @@
 <?php
 session_start();
-ini_set('display_errors', 'on');
+// ini_set('display_errors', 'on');
 require_once 'visite.class.php';
+include_once 'envoie_mail.php';
+include_once 'comparaison_date.php';
 
+ 
 
-    function envoie_mail( )
-    {
-       /* $header = "MIME-Version: 1.0\r\n";
-        $header .='From:"PrimFX.com"<support@primfx.com>'."\n";
-        $header .='Content-Type:Text/html; charset="utf_8"'."\n";
-        $header .='Content-Transfer-Encoding: 8it';
-        mail($email, "URGENCE SANITAIRE ", $message, $header);*/
-
-        ini_set('display_errors', 1);
-        error_reporting(E_ALL);
-        $from = " durantsimen@gmail.com";
-        $to = "kngahami@gmail.com";
-        $subject = "Urgence sanitaire";
-        $message = " Vous etes entré en contact avec une personne contagieuse";
-        $headers = "From:".$from;
-        mail($to, $subject, $message, $headers);
-
-    }
  
 
     $visite = new Visite;
@@ -37,12 +22,9 @@ require_once 'visite.class.php';
     $visite->date_depart = $_REQUEST['dd'];*/
     // enregistrer
 
-
+   
 
     $provinces = filter_input(INPUT_POST, "province", FILTER_DEFAULT);
-    $pathologie = filter_input(INPUT_POST, "pathologie", FILTER_DEFAULT);
-    $symptome = filter_input(INPUT_POST, "symptome", FILTER_DEFAULT);
-    $duree = filter_input(INPUT_POST, "duree", FILTER_DEFAULT);
     $lieus = filter_input(INPUT_POST, "lieu_v", FILTER_DEFAULT);  
     $villes = filter_input(INPUT_POST, "ville", FILTER_DEFAULT); 
     $rues = filter_input(INPUT_POST, "rue", FILTER_DEFAULT); 
@@ -59,24 +41,15 @@ require_once 'visite.class.php';
     $visite->ville = $villes;
     $visite->rue = $rues;
     $visite->numero_civique = $numeros;
-    $visite->pathologie = $pathologie;
-    $visite->symptome = $symptome;
-    $visite->duree = $duree;
     $visite->date_depart = $var2;
     $visite->date_arrive = $var1;
 
-   
+    $visite->getVisite();
+    
+    header("location: ../html/page_enregistrement_visite.php");
+    // header("location: ../html/page_enregistrement_pathologie1.php");
+    
 
-
-    envoie_mail();
-    $var = $visite->getVisite();
-
-
-    if($var==1)
-    {
-
-        header("location: ../html/page_consultation_visite.php");
-    }
 
 
 

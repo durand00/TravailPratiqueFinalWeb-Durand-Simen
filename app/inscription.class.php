@@ -41,7 +41,6 @@
 
 
                 $email = $this->email;
-                // require "../session/config.inc.php"
                 $connexion=new PDO(DNS, USAGER, MDP);
                 $connexion-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 

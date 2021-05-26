@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             Page de connexion
         </title>
@@ -50,7 +51,7 @@
                 <input type="password" placeholder="Entrer le mot de passe" name="password" >
 
                 <label><b>Confirmer le mot de pass</b></label>
-                <input type="password" placeholder="Confirmer mot de pass" name="confirmpassword" >
+                <input type="password" placeholder="Confirmer le mot de passe" name="confirmpassword" >
 
                 <input type="submit" id='submit' value='LOGIN' >
                 <a href="../session/page_login.php" style="text-decoration: none; margin-left:200px; font-style: italic;"> Déjà inscrit? ?</a>

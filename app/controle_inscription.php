@@ -32,7 +32,7 @@
         }
         else{
 
-            if(strlen($mdp)>=8 && $test>=35)
+            if(strlen($mdp)>=6 && $test>=15)
                 {
 
             

@@ -39,7 +39,8 @@ table {
 
 th, td {
     text-align: left;
-    padding: 8px;
+    padding: 10px;
+    width: 50px;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
@@ -60,6 +61,16 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
+input[type=reset], select {
+    width: 100%;
+    padding: 12px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 #btn3 {
     width: 100%;
     background-color: #367205;
@@ -71,9 +82,22 @@ input[type=text], select {
     cursor: pointer;
 }
 
+.btn5 {
+    width: 100%;
+    background-color: #9e2507;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 #btn3 :hover {
     background-color: #7bff00;
 }
+
+
 
 .form{ 
     border-radius: 5px;
@@ -87,4 +111,22 @@ input[type=text], select {
 #heure {
     width: 40%;
     margin-left: 60%;
+}
+
+legend {
+    padding: 10px;
+    background: rgb(84, 148, 95);
+    color: rgb(209, 235, 235);
+    font-size: 14px;
+  }
+
+
+  label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
 }
