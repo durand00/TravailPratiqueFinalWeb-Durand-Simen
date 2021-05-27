@@ -9,7 +9,7 @@
 
         if(!isset($_POST['email']) || empty($_POST['nom']) || empty($_POST['prenom']) ){ 
             header("location: ../html/page_inscription.php?erreur=4");
-            // exit();
+            exit();
         }
 
 
