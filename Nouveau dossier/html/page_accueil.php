@@ -24,7 +24,7 @@ session_start();
     <li><a href="../session/fermer_session.php" style="width: 240px; text-align: left; height: 40px;"> <strong> Se deconnecter</a></li></strong>
     </ul>
 
-    <div style="margin-left:5%;padding:1px 16px;height:1000px;" id="contenu">
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="contenu">
 
     </div>
 

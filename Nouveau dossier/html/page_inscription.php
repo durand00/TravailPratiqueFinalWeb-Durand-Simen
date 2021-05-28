@@ -50,7 +50,7 @@
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" >
 
-                <label><b>Confirmer le mot de passe</b></label>
+                <label><b>Confirmer le mot de pass</b></label>
                 <input type="password" placeholder="Confirmer le mot de passe" name="confirmpassword" >
 
                 <input type="submit" id='submit' value='LOGIN' >

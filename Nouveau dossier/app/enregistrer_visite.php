@@ -46,7 +46,7 @@ include_once 'comparaison_date.php';
 
     $visite->getVisite();
     
-    header("location: ../html/page_consultation_visite.php");
+    header("location: ../html/page_enregistrement_visite.php");
     // header("location: ../html/page_enregistrement_pathologie1.php");
     
 

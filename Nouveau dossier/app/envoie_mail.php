@@ -10,7 +10,7 @@
 
         // ini_set('display_errors', 1);
         error_reporting(E_ALL);
-        $from = "durantsimen@gmail.com";
+        $from = " durantsimen@gmail.com";
         $subject = "Urgence sanitaire";
         $to = $email;
         $message = " Nous voulons juste vous signaler que vous avez fréquenté un lieu en commun avec une personne ayant la pathologie, ";

@@ -1,9 +1,9 @@
 <?php
-    session_start();
-    // if(isset($_COOKIE['erreur'])){
-    //     $message = $_COOKIE['erreur'];
-    //     setcookie("erreur"," ",time()-600);
-    // }
+
+    if(isset($_COOKIE['erreur'])){
+        $message = $_COOKIE['erreur'];
+        setcookie("erreur"," ",time()-600);
+    }
 
 ?>
 
@@ -47,6 +47,7 @@
 
 
                     include '../app/visite.class.php';
+                    session_start();
                     $email = $_SESSION['username'];
                     $provinces = filter_input(INPUT_POST, "province", FILTER_DEFAULT);
                     $pathologie = filter_input(INPUT_POST, "pathologie", FILTER_DEFAULT);
@@ -83,7 +84,7 @@
                         <div> 
                             <p> -->Quelle est la date de votre dernier test?</p>
                             <input type="radio" id="oui" name="duree" value="une_semaine">
-                            <label for="dure">Il y\'a une semaine</label>
+                            <label for="dure">Il y\'a semaine</label>
                         </div>
 
                         <div>

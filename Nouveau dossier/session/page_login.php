@@ -34,38 +34,28 @@
         <div id="container">
             <!-- zone de connexion -->
             
-            <form name="formulaire" action="../app/controle_inscription.php" method="POST">
+            <form name="formulaire" action="authentification.php" method="POST">
                 <h1>Connexion</h1>
                 
-                <label><b>Nom</b></label>
-                <input type="text" placeholder="Entrer votre nom" name="nom" >
-
-                <label><b>Prenom</b></label>
-                <input type="text" placeholder="Entrer votre prenom" name="prenom" >
-
-
                 <label><b>Adresse Email</b></label>
                 <input type="email" placeholder="Entrer votre adresse email" name="email" >
 
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" >
 
-                <label><b>Confirmer le mot de passe</b></label>
-                <input type="password" placeholder="Confirmer le mot de passe" name="confirmpassword" >
-
                 <input type="submit" id='submit' value='LOGIN' >
-                <a href="../session/page_login.php" style="text-decoration: none; margin-left:200px; font-style: italic;"> Déjà inscrit? ?</a>
+                <a href="..\html\page_inscription.php" style="text-decoration: none; margin-left:200px; font-style: italic;"> Pas encore inscrit ?</a>
                 <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
                     if($err==1 || $err==2)
-                        echo "<p style='color:red'>Votre mot de passe n'est pas assez robuste. Utilisez les chiffres et caractères spéciaux !</p>";
+                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
                     elseif($err==3)
-                        echo "<p style='color:red'>Vos deux mots de passe ne sont pas compatibles ! .</p>";
+                        echo "<p style='color:red'>Vous devez inscrire une adresse mail et un mot de passe.</p>";
                     elseif($err==4)
-                        echo "<p style='color:red'> Remplissez tous les champs  !</p>";
+                        echo "<p style='color:green'> Vous etes déconnecté !  </p>";
                     elseif($err==5)
-                        echo "<p style='color:red'> Un utilisateur est déjà inscrit avec cette adresse mail !  </p>";
+                        echo "<p style='color:green'> Vous venez de créer votre compte avec succès. connectez-vous en utilisant vos identifiants !  </p>";
                 }
                 ?>
             </form>

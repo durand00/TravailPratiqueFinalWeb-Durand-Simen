@@ -1,4 +1,6 @@
+
 <?php
+
 session_start();
 ?>
 <!DOCTYPE html>
@@ -81,7 +83,6 @@ session_start();
                         // ini_set('display_errors', 'on');
                         require_once '../app/visite.class.php';
                         $email = $_SESSION['username'];
-                        error_log($email);
                         $i=0;
                         $j=1;
                         $connexion=new PDO(DNS, USAGER, MDP);

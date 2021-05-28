@@ -130,9 +130,3 @@ input,
 label {
     margin: .4rem 0;
 }
-#contenu
-{
-    background-image: url("../images/covid.jpg");
-    background-position: center;
-    /* background-size: cover; */
-} 
